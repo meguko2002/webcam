@@ -1,18 +1,17 @@
 import cv2
 import numpy as np
-SORTNUM = 5
 
-def color_pick(hue,image):
+def color_pick(hue, image):
     hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     hue += 180
     hue %= 180
     range = 20
     hue_max = hue + range
     hue_min = hue - 20
-    hsv_min = np.array([hue_min , 60, 60])
+    hsv_min = np.array([hue_min, 60, 60])
     hsv_max = np.array([hue_max, 255, 255])
     if hue_min < hue_max:
-        mask = cv2.inRange(hsv, hsv_min, hsv_max)
+        mask: None = cv2.inRange(hsv, hsv_min, hsv_max)
     else:
         mask = cv2.inRange(hsv, 0, hsv_max)
         mask += cv2.inRange(hsv, hsv_min, 180)
@@ -38,7 +37,7 @@ cv2.createTrackbar('Hue', 'image', 0, 180, nothing)
 
 cap = cv2.VideoCapture(0)
 kernel = np.ones((5, 5), np.uint8)
-while(True):
+while (True):
     k = cv2.waitKey(1 & 0xFF)
     if k == 27:
         break
@@ -52,14 +51,16 @@ while(True):
     image, contours, hierarchy = cv2.findContours(opening, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
     contours.sort(key=cv2.contourArea, reverse=True)
-    if len(contours) > SORTNUM:
-        for i in range (SORTNUM):
-            frame = cv2.drawContours(frame, [contours[i]], 0, (0, 255, 0), 3)
+    print(len(contours))
+    cv2.putText(frame, 'count =' + str(len(contours)), (0,20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 0), 1,
+                cv2.LINE_AA)
+    if len(contours) > 0 :
+        for i in range(len(contours)):
+            cv2.drawContours(frame, [contours[i]], 0, (0, 255, 0), 3)
             cx, cy = detect_center_of_gravity(contours[i])
-            font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(frame, " (" + str(cx) + "," + str(cy) + ")", (cx, cy), font,0.8, (0, 0, 0), 1, cv2.LINE_AA)
+            cv2.putText(frame, " (" + str(cx) + "," + str(cy) + ")", (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.8,
+                        (0, 0, 0), 1, cv2.LINE_AA)
             cv2.circle(frame, (cx, cy), 5, (0, 0, 0), -1)
-    cv2.putText(frame, 'count =' + str(len(contours)), (10, 100), font, 0.8, (0, 0, 0), 1, cv2.LINE_AA)
     cv2.imshow('image', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
