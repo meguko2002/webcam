@@ -29,7 +29,6 @@ def detect_center_of_gravity(cnt):
 
 def nothing(x):
     pass
-
 cv2.namedWindow('image')
 
 # Create trackbars for color change
