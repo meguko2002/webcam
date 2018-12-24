@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c6df8dc-b60d-4b6b-b8c9-d270a98bef4c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradation.py" beforeDir="false" afterPath="$PROJECT_DIR$/gradation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webcam.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,12 +41,12 @@
         <counts>
           <entry key="Python Console" value="867" />
           <entry key="py" value="1319" />
-          <entry key="txt" value="1" />
+          <entry key="txt" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="46" />
           <entry key="Python" value="2186" />
         </counts>
       </usages-collector>
@@ -269,11 +267,18 @@
       <option name="presentableId" value="Default" />
       <updated>1544927376618</updated>
     </task>
+    <task id="LOCAL-00001" summary="add gradationLine under the trackbar">
+      <created>1545639761970</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545639761970</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="-1" width="668" height="1011" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3265306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -281,12 +286,12 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32945284" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22273248" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22273248" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3673938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32596043" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3249139" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32945284" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3283582" />
@@ -342,6 +347,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add gradationLine under the trackbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add gradationLine under the trackbar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
